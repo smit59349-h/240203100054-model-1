@@ -2,20 +2,75 @@
 <html>
 <head>
 <title>Akshay</title>
+<style>
+
+.container{
+
+padding:80px;
+margin:30px 550px 450px 425px;
+border: 2px solid black;
+
+}
+
+
+
+</style>
 </head>
 
 <body>
-<form>
+<form class="container">
 
+
+<h2>Registration Form : </h2>
 <label>Name :</label>
-<input type="text" id="name" placeholder="Your Name">
-<label>Mobile :</label>
-<input type="text" id="number" placeholder="Your Mobile Number"> 
-<button onclick="validate()">Submit</button>
+<input type="text" id="name" placeholder="Your Name" required><br><br>
+<label>Age :</label>
+<input type="number" id="number" placeholder="Your Age" required><br><br> 
+<label>Gender :</label>
+<input type="radio">Male
+<input type="radio">Female<br><br>
+<label> Email :</label>
+<input type="email" id="email" placeholder="example@gmail.com"  required><br><br>
+<label>No. Of Person :</label>
+<input type="checkbox" id="adult1">1 Adult
+<input type="checkbox" id="adult2">2 Adult
+<input type="checkbox" id="adult3">3 Adult<br>
+<input type="checkbox" id="adult4">4 Adult
+<input type="checkbox" id="child">child<br><br>
 
+<label>DOB :</label>
+<input type="date"  required><br><br>
+
+<label>Book ticket :</label><br>
+date :<input type="date"  required><br>
+week :<input type="week" required><br>
+month :<input type="month" required><br>
+time :<input type="time"  required> <br><br>
+
+Rating to Website : 
+<input type="range"><br><br>
+
+<label>Mobile Number :</label><br>
+<input type="tel" required><br><br>
+
+<label>Search :</label><br>
+<input type="search"><br><br>
+
+Passport Size Photo : <br><input type="file" id="photo"><br><br>
+
+<label>Address</label><br>
+<input type="text" required><br>
+
+color :<input type="color" required>
+
+<br><br>
+<input type="submit">Submit
+<input type="reset"><br><br>
+link :<input type="url" required><br><br>
+<input type="button" value="Pay Now"><br><br>
+<input type="image" src="https://www.w3schools.com/images/w3schools_green.jpg" >
 
 </form>
 
-<style>
 </body>
 </html>
