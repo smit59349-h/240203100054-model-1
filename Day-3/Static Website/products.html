@@ -1,17 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.html">
-    <link rel="stylesheet" href="footer.html">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>About Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
-    <div id="header1"></div>
-    <div id="footer1"></div>
-    <script src="script.js"></script>
+
+  <div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="section">
+        <h2>CATEGORIES</h2>
+
+        <div class="category-item">Women <i class="fa-solid fa-angle-down"></i></div>
+        <div class="category-item">Men <i class="fa-solid fa-angle-down"></i></div>
+        <div class="category-item">Kids <i class="fa-solid fa-angle-down"></i></div>
+        <div class="category-item">Accessories <i class="fa-solid fa-angle-down"></i></div>
+
+        <div class="category-item active">
+          Cosmetic <i class="fa-solid fa-angle-up"></i>
+        </div>
+
+        <ul class="sub-category">
+          <li>Coats</li>
+          <li>Jackets</li>
+          <li>Dresses</li>
+          <li>Shirts</li>
+          <li>T-shirts</li>
+          <li>Jeans</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>SHOP BY PRICE</h2>
+
+        <input type="range" min="0" max="100" value="40" class="slider" />
+
+        <div class="price-box">
+          <span>Price: $33 - $40</span>
+          <button>FILTER</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>SHOP BY SIZE</h2>
+
+        <label><input type="checkbox"> XXS</label>
+        <label><input type="checkbox"> XS</label>
+        <label><input type="checkbox"> XS-S</label>
+        <label><input type="checkbox"> S</label>
+        <label><input type="checkbox"> M</label>
+        <label><input type="checkbox"> M-L</label>
+        <label><input type="checkbox"> L</label>
+        <label><input type="checkbox"> XL</label>
+      </div>
+
+    </aside>
+
+    <main class="products-area">
+
+      <div class="products-grid">
+
+        <div class="product-card">
+          <span class="badge green">NEW</span>
+          <img src="images/man1.jpg" alt="coat">
+          <h3>Furry hooded parka</h3>
+          <div class="stars">★★★★★</div>
+          <p>$ 59.0</p>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man2.jpg" alt="bag">
+          <h3>Flowy striped skirt</h3>
+          <div class="stars">★★★★★</div>
+          <p>$ 49.0</p>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man3.jpg" alt="dress">
+          <h3>Croc-effect bag</h3>
+          <div class="stars">★★★★★</div>
+          <p>$ 59.0</p>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man4.jpg" alt="jeans">
+          <h3>Dark wash Xavi jeans</h3>
+          <div class="stars">★★★★★</div>
+          <p>$ 59.0</p>
+        </div>
+
+        <div class="product-card">
+          <span class="badge red">SALE</span>
+          <img src="images/man5.jpg" alt="shoes">
+          <h3>Ankle-cuff sandals</h3>
+          <div class="stars">★★★★★</div>
+          <p><span class="sale-price">$ 49.0</span> <del>$59.0</del></p>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man6.jpg" alt="backpack">
+          <h3>Contrasting sunglasses</h3>
+          <div class="stars">★★★★★</div>
+          <p>$ 59.0</p>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a class="active" href="index.html">1</a>
+        <a href="page2.html">2</a>
+      </div>
+
+    </main>
+
+  </div>
+
 </body>
 </html>
+
+

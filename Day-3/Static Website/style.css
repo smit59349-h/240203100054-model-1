@@ -33,21 +33,37 @@ body{
     gap:30px;
 }
 
+
 .navbar ul li a{
-    text-decoration:none;
-    color:#000;
-    font-size:14px;
-    position:relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 8px;      
+    transition: 0.3s;
 }
 
+.navbar ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;                 
+    height: 2px;
+    background: red;
+    transition: 0.3s ease;
+}
+
+
+.navbar ul li a:hover::after,
 .navbar ul li a.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:100%;
-    height:2px;
-    background:red;
+    width: 100%;
+}
+
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color: rgb(125, 50, 50);
 }
 
 .header-icons{
@@ -56,11 +72,11 @@ body{
     gap:18px;
 }
 
-.login{
-    text-decoration:none;
-    color:#666;
-    font-size:14px;
+.header .container .header-icons .icon a{
+    text-decoration: none;
 }
+
+
 
 .icon{
     position:relative;
@@ -89,16 +105,58 @@ body{
     bottom: 0;
     position: fixed;
     margin-left: 20px;
-
+    bottom: 0;
 }
 .row{
+    margin-left: 110px;
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 130px;
 }
 .footer .container .footer-about p{
     padding-top: 10px;
     padding-bottom: 15px;
+    width: 350px;
+}
+.footer .copyright {
+    padding: 20px 0;
+
+    text-align: right;
+}
+
+.row2 .footer-links a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.row3 .footer-account a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.row4 .footer-news input{
+    text-align: left;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.row4 .footer-news .btnf{
+    border-radius: 20px;
+    background-color: rgb(202, 48, 5);
+    padding: 5px;
+    color: #eee;
+    font-weight: 600;
+}
+
+.login{
+    text-decoration:none;
+    color:#666;
+    font-size:14px;
 }
 
 .login-container{
@@ -123,7 +181,9 @@ body{
     margin-bottom: 20px;
 }
 .login-box .input-box{
+    padding-left: 20px;
     text-align: left;
+    align-items: center;
     margin-bottom: 20px;
     height: 50px;
 }
@@ -135,6 +195,11 @@ body{
     font-weight: bold;
     width: 100%;
 }
+.login-box .input-box input{
+    border-radius: 10px;
+    padding:5px;
+}
+
 .sign-box{
    padding: 30px;
     border-radius: 20px;
@@ -147,9 +212,75 @@ body{
     margin-bottom: 20px;
 }
 
+.login-box .input-box p{
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.sign-box .input-box p{
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.login-box .input-box .btn-login{
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: red;
+    margin-left: 80px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.sign-box .input-box .btn-login{
+    display: inline-block;
+    padding: 12px 30px;
+    background-color:red;
+    margin-left: 80px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+
+.sign-box .input-box{
+    padding-left: 20px;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 50px;
+}
+.sign-box .input-box label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: bold;
+    width: 100%;
+}
+.sign-box .input-box input{
+    border-radius: 10px;
+    padding:5px;
+}
+
+.sign-box .input-box h5{
+    margin-left: 75px;
+    padding: 3px;
+}
+
+
+
+
+.contact{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-container{
     display: flex;
-    margin-left: 30px;
+    margin-left: 15px;
     flex-direction: column;
     justify-content: left;
     align-items: left;
@@ -157,14 +288,330 @@ body{
     height: 70vh;
 
 }
+.contact-container .contact-info ul li h4{
+    font-family: 'Courier New';
+    gap: 5px;
+}
+
+.contact-container .contact-info ul li p{
+    font-family: 'moonspace';
+    gap: 5px;
+}
+
 .contact-container ul li{
     list-style: none;
 }
 .contact-container .contact-map iframe {
-    align-items: right;
-    overflow: hidden;
+    justify-content: right;
     border-radius: 20px;
     width: 910px;
-    margin-left: 80px;
+    height: 370px;
+    margin-bottom: 30px;
+    margin-left: 180px;
 }
 
+.about {
+    padding: 80px 10%;
+    
+    display: flex;
+    align-items: center;
+}
+
+.about-container {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h1 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.search-container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.close-btn{
+    width: 45px;
+    height: 45px;
+    background: #222;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.search-box{
+    width: 450px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.search-box input{
+    width: 100%;
+    padding: 10px 0;
+
+    border: none;
+    border-bottom: 2px solid #ccc;
+
+    background: transparent;
+
+    font-size: 28px;
+    color: #666;
+
+    outline: none;
+}
+
+.search-box input::placeholder{
+    color: #777;
+}
+
+
+
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+.sidebar {
+  width: 260px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+}
+
+.category-item.active {
+  font-weight: bold;
+}
+
+.sub-category {
+  margin-top: 10px;
+  padding-left: 15px;
+}
+
+.sub-category li {
+  list-style: none;
+  margin: 12px 0;
+  color: #666;
+}
+
+.slider {
+  width: 100%;
+  accent-color: red;
+  margin-top: 20px;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price-box button {
+  padding: 10px 22px;
+  border: 2px solid red;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section label {
+  display: block;
+  margin: 14px 0;
+  color: #555;
+}
+
+.side-text {
+  color: #777;
+  line-height: 1.6;
+}
+
+
+.products-area {
+  flex: 1;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin-top: 18px;
+  font-size: 20px;
+  color: #222;
+}
+
+.stars {
+  color: gold;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.sale-price {
+  color: red;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.pagination a.active {
+  background: red;
+  color: white;
+  border-color: red;
+}
