@@ -99,11 +99,11 @@ body{
     align-items:center;
 }
 
+
 .footer .container{
     display: flex;
     flex-direction: column;
-    bottom: 0;
-    position: fixed;
+    padding-top: 80px;
     margin-left: 20px;
     bottom: 0;
 }
@@ -114,13 +114,12 @@ body{
     gap: 130px;
 }
 .footer .container .footer-about p{
-    padding-top: 10px;
-    padding-bottom: 15px;
+    
     width: 350px;
 }
 .footer .copyright {
     padding: 20px 0;
-
+    border-top: 1px solid #eee;
     text-align: right;
 }
 
@@ -166,10 +165,11 @@ body{
     align-items: center;
     font-family: Arial;
     border-radius: 20px;
-    height: 70vh;
+    height: 720px;
 
 }
 .login-box{
+    margin-top: 100px;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -443,8 +443,22 @@ body{
   width: 260px;
 }
 
+.container .sidebar .section{
+    top: 0;
+}
+
 .section {
-  margin-bottom: 50px;
+
+  margin-bottom: 390px;
+}
+
+.section #one{
+    margin-bottom: 90px;
+}
+
+.section #two{
+    overflow: hidden;
+    margin-bottom: 380px;
 }
 
 .section h2 {
@@ -614,4 +628,27 @@ body{
   background: red;
   color: white;
   border-color: red;
+}
+
+
+
+.product-item img{
+    width: 100px;
+    justify-content: left;
+}
+.product-item .row{
+    display: flex;
+    flex-direction: column;
+}
+.product-item p{
+    overflow:hidden;
+    padding-top: 10px;
+}
+
+table tr th{
+    padding:20px;
+}
+table tr th{
+    width: 520px;
+    font-weight: bold;
 }
