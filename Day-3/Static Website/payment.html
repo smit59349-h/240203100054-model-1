@@ -26,15 +26,15 @@
     </thead>
 
     <tbody>
-      <tr>
+      <tr id="row1">
 
         <td>
           <div class="product">
             <img src="images/man3.jpg" alt="">
             
             <div class="product-info">
-              <h3>Chain bucket bag</h3>
-              <div class="stars">★★★★★</div>
+              <h3>Men 1</h3>
+              
             </div>
           </div>
         </td>
@@ -43,112 +43,21 @@
 
         <td>
           <div class="quantity-box">
-            <span class="quantity-btn">-</span>
-            <span>1</span>
-            <span class="quantity-btn">+</span>
+            <span class="quantity-btn" onclick="min_item()">-</span>
+            <span id="pro1">1</span>
+            <span class="quantity-btn" onclick="add_item()">+</span>
           </div>
         </td>
 
-        <td class="total">$300.0</td>
+        <td class="total" id="total-am1">$150.0</td>
 
         <td>
-          <button class="remove-btn">×</button>
+          <button class="remove-btn" id="remove-btn1" onclick="remove_item()">×</button>
         </td>
 
       </tr>
 
-      <tr>
-
-        <td>
-          <div class="product">
-            <img src="images/man4.jpg" alt="">
-            
-            <div class="product-info">
-              <h3>Zip-pockets pebbled tote briefcase</h3>
-              <div class="stars">★★★★★</div>
-            </div>
-          </div>
-        </td>
-
-        <td class="price">$170.0</td>
-
-        <td>
-          <div class="quantity-box">
-            <span class="quantity-btn">-</span>
-            <span>1</span>
-            <span class="quantity-btn">+</span>
-          </div>
-        </td>
-
-        <td class="total">$170.0</td>
-
-        <td>
-          <button class="remove-btn">×</button>
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-          <div class="product">
-            <img src="images/girl4.jpg" alt="">
-            
-            <div class="product-info">
-              <h3>Black jean</h3>
-              <div class="stars">★★★★★</div>
-            </div>
-          </div>
-        </td>
-
-        <td class="price">$85.0</td>
-
-        <td>
-          <div class="quantity-box">
-            <span class="quantity-btn">-</span>
-            <span>1</span>
-            <span class="quantity-btn">+</span>
-          </div>
-        </td>
-
-        <td class="total">$170.0</td>
-
-        <td>
-          <button class="remove-btn">×</button>
-        </td>
-
-      </tr>
-
-      <tr>
-
-        <td>
-          <div class="product">
-            <img src="images/girl6.jpg" alt="">
-            
-            <div class="product-info">
-              <h3>Cotton Shirt</h3>
-              <div class="stars">★★★★★</div>
-            </div>
-          </div>
-        </td>
-
-        <td class="price">$55.0</td>
-
-        <td>
-          <div class="quantity-box">
-            <span class="quantity-btn">-</span>
-            <span>1</span>
-            <span class="quantity-btn">+</span>
-          </div>
-        </td>
-
-        <td class="total">$110.0</td>
-
-        <td>
-          <button class="remove-btn">×</button>
-        </td>
-
-      </tr>
+      
 
     </tbody>
 
@@ -177,13 +86,8 @@
       <h2>CART TOTAL</h2>
 
       <div class="cart-total-row">
-        <span>Subtotal</span>
-        <span>$750.0</span>
-      </div>
-
-      <div class="cart-total-row">
         <span>Total</span>
-        <span>$750.0</span>
+        <p id="totalMan2">$150.0</p>
       </div>
 
       <button class="checkout-btn">
