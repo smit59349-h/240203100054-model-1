@@ -10,55 +10,192 @@
     <title>Payment</title>
 </head>
 <body>
-    <div id="header1"></div>
-    <div class="shop-cart">
-        <div class="shop-container">
-            <div class="row">
-                <table  >
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="product-item">
-                            <img src="images/man1.jpg">
-                            <div class="product-name">
-                                <p>Green Plaid Shirt over Grey Tank Top</p>
-                                <p>★★★★★</p>
-                            </div>                         
-                        </td>
-                        <td>$45</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        
-                    </tr>
+<div id="header1"></div>
+<section class="cart-section">
 
-                    <tr>
-                        <td class="product-item">
-                            <img src="images/man2.jpg">
-                            <div class="product-name">
-                                <p>Green Plaid Shirt over Grey Tank Top</p>
-                                <p>★★★★★</p>
-                            </div>                         
-                        </td>
-                        <td>$45</td>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
+  <table>
 
-                </tbody>
-                </table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+
+        <td>
+          <div class="product">
+            <img src="images/man3.jpg" alt="">
+            
+            <div class="product-info">
+              <h3>Chain bucket bag</h3>
+              <div class="stars">★★★★★</div>
             </div>
-        </div>
+          </div>
+        </td>
+
+        <td class="price">$150.0</td>
+
+        <td>
+          <div class="quantity-box">
+            <span class="quantity-btn">-</span>
+            <span>1</span>
+            <span class="quantity-btn">+</span>
+          </div>
+        </td>
+
+        <td class="total">$300.0</td>
+
+        <td>
+          <button class="remove-btn">×</button>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+          <div class="product">
+            <img src="images/man4.jpg" alt="">
+            
+            <div class="product-info">
+              <h3>Zip-pockets pebbled tote briefcase</h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </td>
+
+        <td class="price">$170.0</td>
+
+        <td>
+          <div class="quantity-box">
+            <span class="quantity-btn">-</span>
+            <span>1</span>
+            <span class="quantity-btn">+</span>
+          </div>
+        </td>
+
+        <td class="total">$170.0</td>
+
+        <td>
+          <button class="remove-btn">×</button>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+          <div class="product">
+            <img src="images/girl4.jpg" alt="">
+            
+            <div class="product-info">
+              <h3>Black jean</h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </td>
+
+        <td class="price">$85.0</td>
+
+        <td>
+          <div class="quantity-box">
+            <span class="quantity-btn">-</span>
+            <span>1</span>
+            <span class="quantity-btn">+</span>
+          </div>
+        </td>
+
+        <td class="total">$170.0</td>
+
+        <td>
+          <button class="remove-btn">×</button>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td>
+          <div class="product">
+            <img src="images/girl6.jpg" alt="">
+            
+            <div class="product-info">
+              <h3>Cotton Shirt</h3>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </td>
+
+        <td class="price">$55.0</td>
+
+        <td>
+          <div class="quantity-box">
+            <span class="quantity-btn">-</span>
+            <span>1</span>
+            <span class="quantity-btn">+</span>
+          </div>
+        </td>
+
+        <td class="total">$110.0</td>
+
+        <td>
+          <button class="remove-btn">×</button>
+        </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <div class="cart-actions">
+    <button class="btn"><a href="products.html">CONTINUE SHOPPING</a></button>
+    <button class="btn"><a href="cart.html">UPDATE CART</a></button>
+  </div>
+
+  <div class="bottom-wrapper">
+
+    <div class="discount">
+
+      <h2>DISCOUNT CODES</h2>
+
+      <div class="coupon-box">
+        <input type="text" placeholder="Enter your coupon code">
+        <button class="btn-cou">APPLY</button>
+      </div>
+
     </div>
-    <div id="footer1"></div>
-    <script src="script.js"></script>
+
+    <div class="cart-total">
+
+      <h2>CART TOTAL</h2>
+
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span>$750.0</span>
+      </div>
+
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span>$750.0</span>
+      </div>
+
+      <button class="checkout-btn">
+        <a href="paymentDetails.html">PROCEED TO CHECKOUT</a>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+<div id="footer1"></div>
+<script src="script.js"></script>
 </body>
 </html>
