@@ -21,6 +21,7 @@ body{
     background:#fff;
     padding:20px 5%;
     border-bottom:1px solid #eee;
+    position: sticky;
 }
 
 .container{
@@ -108,22 +109,28 @@ body{
     align-items:center;
 }
 
-
-.footer .container{
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-    margin-left: 20px;
-    bottom: 0;
+footer {
+    background-color: #f1f1f1;
+    padding: 60px 80px 20px;
 }
+
+
+.footer .containerf{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .row{
     margin-left: 110px;
     display: flex;
     flex-direction: row;
-    gap: 130px;
+    gap: 70px;
 }
-.footer .container .footer-about p{
-    
+.footer .containerf .footer-about p{
     width: 350px;
 }
 .footer .copyright {
@@ -132,7 +139,7 @@ body{
     text-align: right;
 }
 
-.row2 .footer-links a{
+.row1 .footer-links a{
     display: block;
     text-decoration: none;
     color: #000;
@@ -140,20 +147,32 @@ body{
     margin-bottom: 5px;
 }
 
-.row3 .footer-account a{
+.row1 .footer-account a{
     display: block;
     text-decoration: none;
     color: #000;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.row4 .footer-news input{
+
+.row1{
+    flex: 1;
+    min-width: 250px;
+    gap:5px;
+    align-items: center;
+}
+
+.footer-links{
+    margin-left: 40px;
+}
+
+.row1 .footer-news input{
     text-align: left;
     padding: 5px;
     border-radius: 10px;
 
 }
-.row4 .footer-news .btnf{
+.row1 .footer-news .btnf{
     border-radius: 20px;
     background-color: rgb(202, 48, 5);
     padding: 5px;
@@ -647,6 +666,75 @@ body{
     text-align: center;
 }
 
+@media screen and (max-width: 992px) {
+    .product-container {
+        padding: 20px;
+    }
+    
+    .product-box {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .product-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-image, .product-info {
+        width: 100%;
+    }
+
+    .product-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .my_slider img {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .modal-title {
+        margin-left: 0 !important; 
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .my_slider img {
+        height: 250px;
+    }
+
+    .product-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .sizes button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .cart-btn {
+        width: 100%;
+    }
+}
+
 .sale-price {
   color: red;
 }
@@ -932,3 +1020,5 @@ h1 {
     text-decoration: none;
     color: white;
 }
+
+

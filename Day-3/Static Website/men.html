@@ -1,17 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.html">
-    <link rel="stylesheet" href="footer.html">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>About Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="header.html" />
+  <link rel="stylesheet" href="footer.html" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
-    <div id="header1"></div>
-    <div id="footer1"></div>
-    <script src="script.js"></script>
+  <div id="header1"></div>
+  <div class="container">
+
+    <aside class="sidebar">
+
+      <div class="section" id="one">
+        <h2>CATEGORIES</h2>
+
+        <div class="category-item">Women <i class="fa-solid fa-angle-down"></i></div>
+        <div class="category-item">Men <i class="fa-solid fa-angle-down"></i></div>
+      </div>
+
+      <div class="section" id="two">
+        <h2>SHOP BY PRICE</h2>
+
+        <input type="range" min="0" max="100" value="40" class="slider" />
+
+        <div class="price-box">
+          <span>Price: $33 - $40</span>
+          <button>FILTER</button>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="products-area">
+
+      <div class="products-grid">
+
+        <div class="product-card">
+          <span class="badge green">NEW</span>
+          <img src="images/man1.jpg" alt="coat">
+          <h3>Green Plaid Shirt over Grey Tank Top</h3>
+          <p>$ 59.0</p>
+          <div class="stars"><button class="btn-add" onclick="image1()"><a href="prodDetail.html">Add To Cart</a></button></div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man2.jpg" alt="bag">
+          <h3>Flowy striped skirt</h3>
+          <p>$ 49.0</p>
+          <div class="stars"><button class="btn-add" onclick="image2()"><a href="prodDetail.html">Add To Cart</a></button></div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man3.jpg" alt="dress">
+          <h3>Chimpanzee Men Oversized Fit Shirt</h3>
+          <p>$ 59.0</p>
+          <div class="stars">
+              <button class="btn-add" onclick="image3()"><a href="prodDetail.html">
+                  Add To Cart
+                  </a>
+              </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man4.jpg" alt="jeans">
+          <h3>DLorenzo Bellini Trousers</h3>
+          <p>$ 59.0</p>
+          <div class="stars"><button class="btn-add" onclick="image4()"><a href="prodDetail.html">Add To Cart</a></button></div>
+        </div>
+
+        <div class="product-card">
+          <span class="badge red">SALE</span>
+          <img src="images/man5.jpg" alt="shoes">
+          <h3>Effortless Minimal Men's Outfit </h3>
+          <p><span class="sale-price">$ 49.0</span> <del>$59.0</del></p>
+          <div class="stars"><button class="btn-add" onclick="image5()"><a href="prodDetail.html">Add To Cart</a></button></div>
+        </div>
+
+        <div class="product-card">
+          <img src="images/man6.jpg" alt="backpack">
+          <h3>Clean Minimal Streetwear</h3>
+          <p>$ 59.0</p>
+          <div class="stars"><button class="btn-add" onclick="image6()"><a href="prodDetail.html">Add To Cart</a></button></div>
+        </div>
+
+      </div>
+
+      <div class="pagination">
+        <a class="active" href="index.html">1</a>
+        <a href="page2.html">2</a>
+      </div>
+
+    </main>
+
+  </div>
+
+  <div id="footer1"></div>
+  <script src="script.js"></script>
 </body>
 </html>
+
+
