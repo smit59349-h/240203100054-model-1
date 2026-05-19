@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+    <p id="p1">P tag.</p>
+    <button onclick="new_element()">Add Element</button>
+    </div>
+
+    <script>
+        function new_element(){
+        const para = document.createElement("h1");
+        const para1 = document.createTextNode("Added H1 Element ")
+        para.appendChild(para1);
+        const element = document.getElementById("p1");
+        element.appendChild(para);
+    }
+    </script>
+</html>

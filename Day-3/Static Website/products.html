@@ -26,13 +26,14 @@
       <div class="section" id="two">
         <h2>SHOP BY PRICE</h2>
 
-        <input type="range" min="0" max="100" value="40" class="slider" />
+        <input type="range" id="priceRange" min="0" max="100" value="40" class="slider" class="slider range" oninput="updatePrice(this.value)"/>
 
         <div class="price-box">
-          <span>Price: $33 - $40</span>
-          <button>FILTER</button>
+          <span id="priceText">Price: $0 - $40</span>
+          <button onclick="filterProducts()">FILTER</button>
         </div>
       </div>
+
 
     </aside>
 
@@ -91,9 +92,15 @@
 
       </div>
 
+      <div class="text-center mt-4">
+          <button id="loadMoreBtn" class="btn btn-dark px-4 py-2">
+              Load More
+          </button>
+      </div>
+
       
 
-      <div class="pagination">
+      <div style="margin-right: 115px;" class="pagination">
         <a class="active" href="index.html">1</a>
         <a href="page2.html">2</a>
       </div>

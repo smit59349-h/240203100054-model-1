@@ -135,6 +135,7 @@ footer {
 }
 .footer .copyright {
     padding: 20px 0;
+    margin-left: 580px;
     border-top: 1px solid #eee;
     text-align: right;
 }
@@ -798,6 +799,14 @@ footer {
     padding-left: 30px ;
 
 }
+
+#loadMoreBtn{
+    color: white;
+    background-color: red;
+    border: 2px solid #000;
+    margin-left: 420px;
+}
+
 .quantity-box{
     display:flex;
     justify-content: center;
