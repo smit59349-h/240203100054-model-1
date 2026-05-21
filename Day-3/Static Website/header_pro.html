@@ -1,0 +1,240 @@
+<style>
+
+
+.headerp{
+    width:100%;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.headerp .containerp{
+    width:90%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+
+.navbarp ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.navbarp ul li a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.navbarp ul li a:hover,
+.navbarp ul li a.active{
+    color:#ff4d4d;
+}
+
+
+.header-iconsp{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+
+.search-box{
+    display:flex;
+    align-items:center;
+    border:1px solid #ddd;
+    border-radius:20px;
+
+    width: 180px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    padding:10px 15px;
+    width:120px;
+    font-size:14px;
+}
+
+.search-box button{
+    border:none;
+    background:#111;
+    color:#fff;
+    padding:10px 15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.search-box button:hover{
+    background:#ff4d4d;
+}
+
+
+.sort-box select{
+    padding:10px 15px;
+    border-radius:25px;
+    border:1px solid #ddd;
+    outline:none;
+    cursor:pointer;
+    font-size:14px;
+}
+
+
+
+
+.login{
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+}
+
+
+.icon a{
+    text-decoration:none;
+    font-size:20px;
+    color:#111;
+    transition:0.3s;
+}
+
+.icon a:hover{
+    color:#ff4d4d;
+}
+
+
+
+</style>
+
+
+<header class="headerp">
+    <div class="containerp">
+        <div class="logo">
+            <img src="images/logo.png" width="100px" height="35px">
+        </div>
+
+        <nav class="navbarp">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="women.html">WOMEN’S</a></li>
+                <li><a href="men.html">MEN’S</a></li>
+                <li><a href="products.html" class="active">SHOP</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li>
+                    <div class="header-iconsp">
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button onclick="searchProducts()">
+                    <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                </button>
+
+            </div>
+
+            
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-iconsp">
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button onclick="searchProducts()">
+                    <i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                </button>
+
+            </div>
+
+            <div class="sort-box">
+                <select id="sortSelect" onchange="sortProducts()">
+                    <option value="">Sort By</option>
+                    <option value="az">Name A-Z</option>
+                    <option value="za">Name Z-A</option>
+                </select>
+            </div>
+
+            <a href="login.html" class="login">Login / Register</a>
+
+            <div class="icon cart">
+                <a href="#">❤</a>
+            </div>
+
+            <div class="icon cart">
+                <a href="payment.html">🛒</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+
+<script>
+
+
+function searchProducts() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(function(product){
+
+        let name = product.querySelector("h3").innerText.toLowerCase();
+
+        if(name.includes(input)){
+            product.style.display = "block";
+        }
+        else{
+            product.style.display = "none";
+        }
+
+    });
+}
+
+
+function sortProducts(){
+
+    let grid = document.querySelector(".products-grid");
+
+    let products = Array.from(document.querySelectorAll(".product-card"));
+
+    let value = document.getElementById("sortSelect").value;
+
+    products.sort(function(a,b){
+
+        let nameA = a.querySelector("h3").innerText.toLowerCase();
+        let nameB = b.querySelector("h3").innerText.toLowerCase();
+
+        if(value === "az"){
+            return nameA.localeCompare(nameB);
+        }
+
+        if(value === "za"){
+            return nameB.localeCompare(nameA);
+        }
+
+    });
+
+    products.forEach(function(product){
+        grid.appendChild(product);
+    });
+
+}
+
+</script>

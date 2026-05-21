@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Operations</title>
 </head>
 <body>
+
     <div id="div1">
-    <p id="p1">P tag.</p>
-    <button onclick="new_element()">Add Element</button>
+        <p id="p1">P tag.</p>
+        <button onclick="new_element()">Add Element</button>
+        <button onclick="change_element()">Change Element</button>
+        <button onclick="remove_element()">Remove Element</button>
     </div>
 
     <script>
-        function new_element(){
-        const para = document.createElement("h1");
-        const para1 = document.createTextNode("Added H1 Element ")
-        para.appendChild(para1);
-        const element = document.getElementById("p1");
-        element.appendChild(para);
-    }
+        function new_element() {
+            const para = document.createElement("h1");
+            const text = document.createTextNode("Added H1 Element");
+            para.appendChild(text);
+
+            const element = document.getElementById("div1");
+            element.appendChild(para);
+        }
+
+        function change_element() {
+            const element = document.getElementById("p1");
+            element.innerHTML = "This paragraph has been changed!";
+        }
+
+        function remove_element() {
+            const element = document.getElementById("p1");
+            element.remove();
+        }
     </script>
+
+</body>
 </html>

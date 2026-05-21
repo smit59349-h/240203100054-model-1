@@ -3,6 +3,26 @@ $(document).ready(function(){
     $("#footer1").load("footer.html");
 });
 
+        let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 50) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        scrollTopBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+$(document).ready(function(){
+    $("#header2").load("header_pro.html");
+});
+
 
 function add_item() {
     let quantitySpan = document.getElementById("pro1").innerText;

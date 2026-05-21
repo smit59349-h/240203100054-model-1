@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
-</head>
-<body>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script></head>
     <div class="footer">
         <div class="containerf">
             <div class="row">
@@ -55,23 +47,4 @@
         ↑
     </button>
 
-    <script>
-        let scrollTopBtn = document.getElementById("scrollTopBtn");
-
-        window.onscroll = function () {
-            if (document.documentElement.scrollTop > 50) {
-                scrollTopBtn.style.display = "block";
-            } else {
-                scrollTopBtn.style.display = "none";
-            }
-        };
-
-        scrollTopBtn.onclick = function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        };
-</script>
-</body>
-</html>
+<script src="script.js"></script>
