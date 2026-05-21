@@ -28,6 +28,175 @@
   color: #61dafb;
 }
 
+.header{
+    background:#fff;
+    padding:20px 5%;
+    border-bottom:1px solid #eee;
+    position: sticky;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo a{
+    text-decoration:none;
+    font-size:32px;
+    font-weight:bold;
+    color:#000;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 8px;      
+    transition: 0.3s;
+}
+
+.navbar ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;                 
+    height: 2px;
+    background: red;
+    transition: 0.3s ease;
+}
+
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after{
+    width: 100%;
+}
+
+
+.navbar ul li a:hover,
+.navbar ul li a.active{
+    color: rgb(125, 50, 50);
+}
+
+.header-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.header .container .header-icons .icon a{
+    text-decoration: none;
+}
+
+
+
+.icon{
+    position:relative;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.icon span{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:#000;
+    color:#fff;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    font-size:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 60px 80px 20px;
+}
+
+
+.footer .containerf{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.row{
+    margin-left: 110px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+.footer .containerf .footer-about p{
+    width: 350px;
+}
+.footer .copyright {
+    padding: 20px 0;
+    margin-left: 580px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.row1 .footer-links a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.row1 .footer-account a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.row1{
+    flex: 1;
+    min-width: 250px;
+    gap:5px;
+    align-items: center;
+}
+
+.footer-links{
+    margin-left: 40px;
+}
+
+.row1 .footer-news input{
+    text-align: left;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.row1 .footer-news .btnf{
+    border-radius: 20px;
+    background-color: rgb(202, 48, 5);
+    padding: 5px;
+    color: #eee;
+    font-weight: 600;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
