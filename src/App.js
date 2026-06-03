@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Footer from "./Footer";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Registration from "./Registration";
+import Apicalling from "./Apicalling";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Apicalling />} />
+        {/* <Route path="/" element={<Registration />} />
+        <Route path="/signup" element={<Registration />} />
+        <Route path="*" element={<Navigate to="/signup" replace />} /> */}
+      </Routes>
+      <Registration />
+      <Footer />
+    </BrowserRouter>
   );
 }
 
