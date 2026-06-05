@@ -5,7 +5,7 @@ function Apicalling() {
 
   // API Calling
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://fashionstore-backend-niaq.onrender.com/users")
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);

@@ -23,6 +23,7 @@
 // export default App;
 
 
+import Apicalling from "./pages/Apicalling";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
@@ -60,6 +61,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/apicalling" element={<Apicalling />} />
         <Route
           path="/cart"
           element={<Cart cart={cart} removeFromCart={removeFromCart} />}
