@@ -19,23 +19,26 @@ function Apicalling() {
     <div>
       <h1>User Table</h1>
 
-      <table border="1" cellPadding="10" width="100%">
+      <table
+        border="1"
+        cellPadding="10"
+        width="100%"
+        style={{ textAlign: "center" }}
+      >
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>City</th>
+            <th align="center">ID</th>
+            <th align="center">Name</th>
+            <th align="center">Email</th>
           </tr>
         </thead>
 
         <tbody>
           {users.map((user) => (
-            <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.address.city}</td>
+            <tr key={user._id}>
+              <td align="center">{user._id}</td>
+              <td align="center">{user.username}</td>
+              <td align="center">{user.email}</td>
             </tr>
           ))}
         </tbody>

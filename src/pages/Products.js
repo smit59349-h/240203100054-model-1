@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 function Products({ addToCart }) {
+  const navigate = useNavigate();
   const products = [
     {
       name: "Men T-Shirt",
@@ -39,6 +41,9 @@ function Products({ addToCart }) {
 
             <button onClick={() => addToCart(product)}>
               Add To Cart
+            </button>
+            <button onClick={() => navigate("/buy")}>
+               Buy Now
             </button>
           </div>
         ))}
