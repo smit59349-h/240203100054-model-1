@@ -18,6 +18,7 @@ function Navbar({ cartCount }) {
         <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
         <Link to="/apicalling">Api Calling</Link>
+        <Link to="/about">About Us</Link>
       </div>
 
       <input

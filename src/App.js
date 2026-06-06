@@ -37,6 +37,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Buy from "./pages/Buy";
+import About from "./pages/About";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -69,6 +70,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/buy" element={<Buy />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>
